@@ -1,44 +1,56 @@
-:root{
-
-    --background-color-fondo:#f1f0ea;
-    --background-color-seccion1:#112c50;
-    --background-color-seccion2:#b9cade;
-    --background-color-seccion3:#d7c2b6;
-    --background-color-acentos1:#c55a26;
-    --background-color-acentos2:#e3be86;
-    --background-color-hover:#faa82a;
-    --font-size-encabezado-h1:55px;
-    --font-size-encabezado-h2:36px;
-    --font-size-encabezado-h3:32px;
-    --font-size-encabezado-h4:18px;
-    --font-size-texto-destacado:20px;
-    --font-size-parrafos:16px;
-    --padding-for-header:20px;
-    --max-width-page:1488px;
+:root {
+  --background-color-fondo: #f1f0ea;
+  --background-color-seccion1: #112c50;
+  --background-color-seccion2: #b9cade;
+  --background-color-seccion3: #d7c2b6;
+  --background-color-acentos1: #c55a26;
+  --background-color-acentos2: #e3be86;
+  --background-color-hover: #faa82a;
+  --font-size-encabezado-h1: 55px;
+  --font-size-encabezado-h2: 36px;
+  --font-size-encabezado-h3: 32px;
+  --font-size-encabezado-h4: 18px;
+  --font-size-texto-destacado: 20px;
+  --font-size-parrafos: 16px;
+  --padding-for-header: 20px;
+  --max-width-page: 1488px;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    width: var(--max-width-page);
-    margin: 0 auto;
-    padding: 0 20px;
+.container {
+  width: var(--max-width-page);
+  margin: 0 auto;
+  padding: 0 20px;
+  border: 2px solid green;
 }
 
-header{
-    background-color: var(--background-color-seccion1);
-    padding: var(--padding-for-header);
+header {
+  background-color: var(--background-color-seccion1);
+  padding: var(--padding-for-header);
 }
 
-.row{
-    display: flex;
-    justify-content: space-between;
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
-.row .headerelement p{
-    color: var(--background-color-acentos2);
+.row .headerelement p {
+  color: var(--background-color-acentos2);
+  font-size: var(--font-size-parrafos);
+}
+
+.row .headerelement2 p {
+  color: var(--background-color-fondo);
+  font-size: var(--font-size-parrafos);
+  margin-right: 30px;
+  display: inline;
+}
+
+.section1 {
+  background-image: url();
 }
