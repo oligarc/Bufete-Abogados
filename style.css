@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "NeueMontreal-Medium";
+  src: url(assets/fonts/NeueMontreal-Medium.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NeueMontreal-Medium-Italic";
+  src: url(assets/fonts/NeueMontreal-MediumItalic.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NeueMontreal-Regular";
+  src: url(assets/fonts/NeueMontreal-Regular.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "RecklessNeue-Medium";
+  src: url(assets/fonts/RecklessNeue-Medium.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "RecklessNeue-Regular";
+  src: url(assets/fonts/RecklessNeue-Regular.woff) format("truetype");
+}
+
 :root {
   --background-color-fondo: #f1f0ea;
   --background-color-seccion1: #112c50;
@@ -5,6 +30,7 @@
   --background-color-seccion3: #d7c2b6;
   --background-color-acentos1: #c55a26;
   --background-color-acentos2: #e3be86;
+  --background-color-hr: #126f8c;
   --background-color-hover: #faa82a;
   --font-size-encabezado-h1: 55px;
   --font-size-encabezado-h2: 36px;
@@ -12,6 +38,11 @@
   --font-size-encabezado-h4: 18px;
   --font-size-texto-destacado: 20px;
   --font-size-parrafos: 16px;
+  --font-family-neue-medium: "NeueMontreal-Medium";
+  --font-family-neue-medium-italic: "NeueMontreal-Medium-Italic";
+  --font-family-neue-regular: "NeueMontreal-Regular";
+  --font-family-reckless-medium: "RecklessNeue-Medium";
+  --font-family-reckless-regular: "RecklessNeue-Regular";
   --padding-for-header: 20px;
   --max-width-page: 1488px;
 }
@@ -24,33 +55,163 @@
 
 .container {
   width: var(--max-width-page);
-  margin: 0 auto;
   padding: 0 20px;
-  border: 2px solid green;
+  margin: 0 auto;
 }
 
-header {
-  background-color: var(--background-color-seccion1);
-  padding: var(--padding-for-header);
+.container2 {
+  width: 80%;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .row {
   display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.hero {
+  background-color: var(--background-color-seccion1);
+}
+
+header .top-bar {
+  padding: var(--padding-for-header);
+}
+
+.top-bar {
+  display: flex;
   justify-content: space-between;
 }
 
-.row .headerelement p {
-  color: var(--background-color-acentos2);
-  font-size: var(--font-size-parrafos);
-}
-
-.row .headerelement2 p {
+.top-bar-content a,
+span {
   color: var(--background-color-fondo);
-  font-size: var(--font-size-parrafos);
-  margin-right: 30px;
-  display: inline;
+  text-decoration: none;
 }
 
-.section1 {
-  background-image: url();
+.language-switcher {
+  margin-right: 30px;
+}
+
+.section-background-image {
+  background-image: url(assets/img/header-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section-background-image .container nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 70px;
+}
+
+.nav-links {
+  list-style-type: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--background-color-fondo);
+  font-family: var(--font-family-neue-medium);
+}
+
+.hero-content {
+  color: var(--background-color-fondo);
+  border: 2px solid black;
+  width: 38%;
+  padding-bottom: 100px;
+}
+
+.hero-content p {
+  font-size: var(--font-size-parrafos);
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: var(--font-size-encabezado-h1);
+  font-family: var(--font-family-neue-medium);
+  margin-bottom: 20px;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+}
+
+.btn-1 {
+  background-color: var(--background-color-acentos2);
+  padding: 10px 8px;
+  border-radius: 7px;
+  margin-right: 20px;
+  border: none;
+}
+
+.btn-2 {
+  background-color: var(--background-color-acentos1);
+  padding: 10px 8px;
+  border-radius: 7px;
+  border: none;
+}
+
+.btn-1 a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-2 a {
+  color: var(--background-color-fondo);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about {
+  background-color: var(--background-color-fondo);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.prueba {
+  width: 40%;
+  margin-right: 40px;
+}
+
+.about hr {
+  width: 12%;
+  border-top: 7px solid var(--background-color-hr);
+}
+
+.about h2 {
+  font-size: var(--font-size-encabezado-h2);
+  margin-bottom: 30px;
+}
+
+aside img {
+  border-radius: 20px;
+}
+
+.services {
+  background-image: url(assets/img/techo-cristal.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  text-align: center;
+  color: var(--background-color-fondo);
+}
+
+.services h3 {
+  font-size: var(--font-size-encabezado-h3);
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: var(--font-size-parrafos);
 }
