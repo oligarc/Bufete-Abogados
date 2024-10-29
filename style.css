@@ -1,26 +1,26 @@
 @font-face {
   font-family: "NeueMontreal-Medium";
-  src: url(assets/fonts/NeueMontreal-Medium.woff) format("truetype");
+  src: url(assets/fonts/NeueMontreal-Medium.woff2) format("truetype");
 }
 
 @font-face {
   font-family: "NeueMontreal-Medium-Italic";
-  src: url(assets/fonts/NeueMontreal-MediumItalic.woff) format("truetype");
+  src: url(assets/fonts/NeueMontreal-MediumItalic.woff2) format("truetype");
 }
 
 @font-face {
   font-family: "NeueMontreal-Regular";
-  src: url(assets/fonts/NeueMontreal-Regular.woff) format("truetype");
+  src: url(assets/fonts/NeueMontreal-Regular.woff2) format("truetype");
 }
 
 @font-face {
   font-family: "RecklessNeue-Medium";
-  src: url(assets/fonts/RecklessNeue-Medium.woff) format("truetype");
+  src: url(assets/fonts/RecklessNeue-Medium.woff2) format("truetype");
 }
 
 @font-face {
   font-family: "RecklessNeue-Regular";
-  src: url(assets/fonts/RecklessNeue-Regular.woff) format("truetype");
+  src: url(assets/fonts/RecklessNeue-Regular.woff2) format("truetype");
 }
 
 :root {
@@ -69,6 +69,11 @@
   display: flex;
   justify-content: center;
   vertical-align: middle;
+}
+
+.row-location {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero {
@@ -131,17 +136,22 @@ span {
 
 .hero-content p {
   font-size: var(--font-size-parrafos);
+  font-family: var(--font-family-reckless-medium);
   margin-bottom: 20px;
 }
 
 .hero-content h1 {
   font-size: var(--font-size-encabezado-h1);
-  font-family: var(--font-family-neue-medium);
+  font-family: var(--font-family-reckless-regular);
   margin-bottom: 20px;
 }
 
 .hero-buttons a {
   text-decoration: none;
+}
+
+.highlight {
+  font-family: var(--font-family-neue-medium-italic);
 }
 
 .btn-1 {
@@ -185,11 +195,24 @@ span {
 .about hr {
   width: 12%;
   border-top: 7px solid var(--background-color-hr);
+  margin-bottom: 10px;
 }
 
 .about h2 {
   font-size: var(--font-size-encabezado-h2);
+  font-family: var(--font-family-reckless-regular);
   margin-bottom: 30px;
+}
+
+.about p {
+  font-size: var(--font-size-parrafos);
+  font-family: var(--font-family-neue-medium);
+}
+
+.aboutspan {
+  font-weight: bold;
+  font-family: var(--font-family-neue-medium-italic);
+  color: black;
 }
 
 aside img {
@@ -209,6 +232,7 @@ aside img {
 .services h3 {
   font-size: var(--font-size-encabezado-h3);
   margin-bottom: 20px;
+  font-family: var(--font-family-reckless-regular);
 }
 
 .services p {
@@ -233,6 +257,7 @@ aside img {
 
 .contenedor-team1 h3 {
   font-size: var(--font-size-encabezado-h3);
+  font-family: var(--font-family-reckless-regular);
   margin-bottom: 70px;
 }
 
@@ -243,9 +268,24 @@ aside img {
   border-radius: 10px;
 }
 
+.span20 {
+  font-weight: bold;
+  font-family: var(--font-family-neue-medium-italic);
+  color: black;
+  font-size: var(--font-size-parrafos);
+}
+
 .team-members p {
   margin-bottom: 10px;
   font-size: var(--font-size-parrafos);
+  font-family: var(--font-family-neue-medium);
+}
+
+.team-members h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: var(--font-size-encabezado-h4);
+  font-family: var(--font-family-reckless-regular);
 }
 
 .team-members .row article {
@@ -266,6 +306,7 @@ aside img {
 .testimonials .container h3 {
   font-size: var(--font-size-encabezado-h3);
   color: var(--background-color-fondo);
+  font-family: var(--font-family-reckless-regular);
   margin-bottom: 20px;
 }
 
@@ -298,15 +339,49 @@ blockquote footer {
 .contact-form .container hr {
   width: 5%;
   border-top: 7px solid var(--background-color-hr);
+  margin-bottom: 10px;
 }
 
 .contact-form .container h3 {
   font-size: var(--font-size-encabezado-h3);
+  font-family: var(--font-family-reckless-regular);
   margin-bottom: 10px;
 }
 
 .contact-form .container p {
   font-size: var(--font-size-parrafos);
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="email"],
+.form-grid input[type="tel"],
+.form-grid textarea {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: none;
+}
+
+.form-grid textarea {
+  grid-column: span 2;
+  padding: 50px;
+  text-align: left;
+}
+
+.form-grid button {
+  grid-column: 2;
+  justify-self: end;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .location {
@@ -314,17 +389,29 @@ blockquote footer {
   padding-bottom: 30px;
 }
 
+.location .container .row-location > :nth-child(1) {
+  width: 30%;
+}
+
+.location .container .row-location > :nth-child(2) {
+  width: 70%;
+}
+
 .location .container hr {
-  width: 5%;
+  width: 20%;
   border-top: 7px solid var(--background-color-hr);
+  margin-bottom: 10px;
 }
 
 .location .container h3 {
   font-size: var(--font-size-encabezado-h3);
+  font-family: var(--font-family-reckless-regular);
+  margin-bottom: 30px;
 }
 
 .location .container p {
   font-size: var(--font-size-parrafos);
+  font-family: var(--font-family-reckless-regular);
 }
 
 .footerreal {
@@ -347,6 +434,7 @@ footer a {
 .footer-info a {
   display: block;
   margin-bottom: 20px;
+  font-family: var(--font-family-neue-regular);
 }
 
 .footer-nav ul {
@@ -357,18 +445,19 @@ footer a {
   margin-bottom: 20px;
 }
 
+.footer-nav ul li a {
+  font-family: var(--font-family-neue-regular);
+}
+
 .row-footer > :nth-child(1) {
-  border: 2px solid black;
   width: 10%;
 }
 
 .row-footer > :nth-child(2) {
-  border: 2px solid green;
   width: 10%;
 }
 
 .row-footer > :nth-child(3) {
-  border: 2px solid gold;
   width: 30%;
   text-align: center;
   margin-top: 20px;
@@ -379,6 +468,38 @@ footer a {
 }
 
 .row-footer > :nth-child(4) {
-  border: 2px solid rebeccapurple;
   width: 30%;
+}
+
+.social-media img {
+  width: 8%;
+  margin-right: 10px;
+}
+
+.newsletter {
+  position: relative;
+}
+
+.newsletter p {
+  font-size: var(--font-size-parrafos);
+  font-family: var(--font-family-reckless-regular);
+  margin-bottom: 10px;
+}
+
+.newsletter input[type="email"] {
+  width: 80%;
+  display: block;
+  padding: 5px;
+  background-color: var(--background-color-seccion2);
+}
+
+.newsletter button {
+  color: var(--background-color-fondo);
+  background-color: var(--background-color-seccion1);
+  border-radius: 15px;
+  padding: 5px 20px;
+  position: absolute;
+  top: 70px;
+  left: 270px;
+  border: 1px solid white;
 }
