@@ -45,6 +45,53 @@
   --font-family-reckless-regular: "RecklessNeue-Regular";
   --padding-for-header: 20px;
   --max-width-page: 1488px;
+  --auxiliary-acentos-1: rgb(197 90 38);
+  --auxiliary-acentos-2: rgb(227 190 134);
+  --auxiliary-hover: rgb(250 168 42);
+  --basics-black: rgb(0 0 0);
+  --basics-white: rgb(241 240 234);
+  --primary-fondo: var(--basics-white);
+  --primary-secciones-1: rgb(17 44 80);
+  --secondary-secciones-2: rgb(185 202 222);
+  --secondary-secciones-3: rgb(215 194 182);
+  --padding-default: 20px;
+  --padding-header: var(--padding-default);
+  --padding-top-bottom-section: 100px;
+
+  --width-container: 80%;
+  --width-container-max: 1200px;
+  --width-prueba: 40%;
+  --width-hero: 38%;
+  --width-team: 30%;
+  --width-location-left: 30%;
+  --width-location-right: 70%;
+  --width-footer-section1: 10%;
+  --width-footer-section2: 10%;
+  --width-footer-section3: 30%;
+  --width-footer-section4: 30%;
+  --width-social-media: 8%;
+  --margin-default: 20px;
+  --margin-top-section: 50px;
+  --margin-bottom-section: 50px;
+  --margin-bottom-header: 70px;
+  --border-radius-default: 10px;
+  --border-radius-large: 20px;
+  --gap-form-grid: 20px;
+  --padding-input: 10px;
+  --padding-button: 10px 20px;
+  --padding-large: 50px;
+  --width-form-email: 80%;
+  --text-on-dark: var(--basics-white);
+  --text-primary: var(--basics-black);
+  --size-button-text: 0.1414rem;
+  --size-parrafo: 0.1616rem;
+  --size-h4: 0.1818rem;
+  --size-texto-destacado: 0.202rem;
+  --size-h3: 0.3232rem;
+  --size-h2: 0.3636rem;
+  --size-h1: 0.5556rem;
+  --weight-parrafo: Regular;
+  --radius-button-radius: 0.101rem;
 }
 
 * {
@@ -100,7 +147,7 @@ span {
 }
 
 .section-background-image {
-  background-image: url(assets/img/header-background.jpg);
+  background-image: url(../assets/img/header-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -220,7 +267,7 @@ aside img {
 }
 
 .services {
-  background-image: url(assets/img/techo-cristal.jpg);
+  background-image: url(../assets/img/techo-cristal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 100px;
